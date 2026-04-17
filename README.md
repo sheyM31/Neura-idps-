@@ -32,6 +32,7 @@ Deux types de capteurs :
 ##🤖 le module core
  
 core orchestre le fonctionnement du système.assure la communication entre module.
+il récupère les résultats de l'analyse des modèles IA et les Envois à hestia
 
 ## AI modèles
 
@@ -40,7 +41,8 @@ analyse les métadonnées des paquets et les échanges utilisateur/IA pour déte
 ## hestia
 
 module d'action du système
-il est doté d'un analyseur 
+il est doté d'un analyseur de score de confiance et d'un sous module de décision qui décide des actions à appliquer
+
 ---
 
 ##  Pipeline de traitement
@@ -62,8 +64,4 @@ il est doté d'un analyseur
                   ↓
             [ Module de décision ]
 
-🤖 architecture logique
-
-chaque module fonctionne indépendanment des autres.et le tout est orchestrer par core/
-
-# AI/module 
+## comment lancé 
