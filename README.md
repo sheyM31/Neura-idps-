@@ -29,6 +29,18 @@ Deux types de capteurs :
 - Sorties du modèle (réponses IA)
 - Décryptage si nécessaire
 
+##🤖 le module core
+ 
+core orchestre le fonctionnement du système.assure la communication entre module.
+
+## AI modèles
+
+analyse les métadonnées des paquets et les échanges utilisateur/IA pour détecter les anomalies
+
+## hestia
+
+module d'action du système
+il est doté d'un analyseur 
 ---
 
 ##  Pipeline de traitement
