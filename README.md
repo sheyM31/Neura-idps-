@@ -1,68 +1,161 @@
-# 🧠 Neura-IDPS
+🧠 Neura-IDPS
 
-Neura-IDPS est un système intelligent de détection et de prévention des intrusions (IDPS) combinant :
-- surveillance réseau
-- analyse des interactions avec les modèles d’IA
-- intelligence artificielle (Machine Learning)
-- moteur de décision autonome (Hestia)
+Neura-IDPS est un système intelligent de détection et de prévention d’intrusions (IDPS) basé sur l’intelligence artificielle.
+Il combine l’analyse du trafic réseau,la surveillance des échanges utilisateur/IA, le machine learning et un moteur de décision autonome pour détecter et réagir aux comportements suspects en temps réel.
+
 
 ---
 
-## 🏗️ Architecture Fonctionnelle
+🚀 Vision du projet
 
-### 🔹 Sources de données
-- 🌐 Trafic réseau
-- 🤖 Échanges utilisateur ↔ système IA
+Créer un système de cybersécurité intelligent capable de :
 
----
+détecter les attaques réseau en temps réel
 
-## 📡 Capteurs
+protéger les systèmes d'intelligence artificielle contre les attaques adversarial
 
-Deux types de capteurs :
+analyser les comportements anormaux via ML
 
-### 1. Capteurs réseau
-- Collecte des métadonnées des paquets
-- Analyse du trafic
+prendre des décisions autonomes (alerte, blocage, mitigation)
 
-### 2. Capteurs IA
-- Entrées utilisateur (prompts)
-- Sorties du modèle (réponses IA)
-- Décryptage si nécessaire
+évoluer avec de nouvelles données d’attaques
 
-## le module core
 
- 
-core orchestre le fonctionnement du système.assure la communication entre module.
-il récupère les résultats de l'analyse des modèles IA et les Envois à hestia
-
-## AI modèles
-
-analyse les métadonnées des paquets et les échanges utilisateur/IA pour détecter les anomalies
-
-## hestia
-
-module d'action du système
-il est doté d'un analyseur de score de confiance et d'un sous module de décision qui décide des actions à appliquer
 
 ---
 
-##  Pipeline de traitement
+🏗️ Architecture globale
 
-```text
-[ Capteurs ]
-      ↓
-[ Vérification des règles ]
-      ↓
- ┌───────────────┬───────────────┐
- │               │               │
-❌ Non conforme   ✅ Conforme
- │               ↓
- ↓       [ Modèles IA ]
-[ Hestia ]        ↓
- (blocage)   [ Scores de confiance ]
-                  ↓
-            [ Analyseur de score ]
-                  ↓
-            [ Module de décision ]
+[ Sensors ]
+   ↓
+[ Core Engine ]
+   ↓
+[ ML Models ]
+   ↓
+[ Hestia Decision Engine ]
+   ↓
+[ Actions (Alert / Block / Log) ]
 
-## comment lancé 
+
+---
+
+🧩 Structure du projet
+
+Neura-IDPS/
+│
+├── core/              # Orchestrateur principal du système
+├── sensors/           # Collecte des données (réseau,prompt utilisateur/sortie du model)
+├── models/            # Modèles ML (Isolation Forest, Random Forest)
+├── hestia/            # Moteur de décision et réponse
+├── training/          # Scripts d'entraînement des modèles
+├── data/              # Datasets
+(CICIDS2018)
+├── utils/             # Fonctions utilitaires
+├── logs/              # Logs du système
+└── README.md
+
+
+---
+
+🤖 Intelligence artificielle
+
+Neura-IDPS utilise des algorithmes de machine learning pour la détection d’anomalies :
+
+Isolation Forest → détection d’anomalies non supervisée
+
+Random Forest → classification des attaques connues
+
+Feature Engineering → transformation des données réseau
+
+
+Pipeline ML :
+
+Data → Preprocessing → Feature Extraction → Training → Prediction → Decision
+
+
+---
+
+⚙️ Fonctionnement
+
+1. Les sensors capturent les données réseau
+
+
+2. Le core centralise et normalise les événements
+
+
+3. Les modèles ML analysent et détectent les anomalies
+
+
+4. Hestia prend une décision (autoriser / bloquer / alerter)
+
+
+5. Le système exécute l’action en temps réel
+
+
+
+
+---
+
+📊 Dataset utilisé
+
+CICIDS2018 (principal)
+
+Possibilité d’ajouter d’autres datasets IDS/IPS
+
+
+
+---
+
+🛠️ Installation
+
+git clone https://github.com/sheyM31/Neura-idps-
+cd Neura-idps-
+
+pip install -r requirements.txt
+
+
+---
+
+▶️ Lancement 
+
+python core/main.py
+
+
+---
+
+🧪 Objectifs futurs
+
+intégration deep learning (LSTM / Transformer)
+
+dashboard de monitoring en temps réel
+
+système d’auto-adaptation des modèles
+
+déploiement en environnement réseau réel
+
+API de sécurité pour intégration externe
+
+
+
+---
+
+⚠️ Avertissement
+
+Ce projet est en développement.
+Les modèles et décisions doivent être testés avant utilisation en production.
+
+
+---
+
+👤 Auteur
+
+Projet développé par neura labs
+Orientation : cybersécurité + intelligence artificielle
+
+
+---
+
+🔥 Résumé
+
+Neura-IDPS vise à devenir un système de défense autonome intelligent, capable de comprendre et réagir aux menaces réseau et aux attaques adversarial sans intervention humaine constante.
+
