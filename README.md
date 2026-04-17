@@ -49,3 +49,9 @@ Deux types de capteurs :
             [ Analyseur de score ]
                   ↓
             [ Module de décision ]
+
+🤖 architecture logique
+
+chaque module fonctionne indépendanment des autres.et le tout est orchestrer par core/
+
+# AI/module 
