@@ -50,7 +50,7 @@ Neura-IDPS/
 ├── training/          # Scripts d'entraînement des modèles
 ├── data/              # Datasets
 (CICIDS2018)
-├── utils/             # Fonctions utilitaires
+├── utils/.           # Fonctions        utilitaires
 ├── logs/              # Logs du système
 └── README.md
 
@@ -149,7 +149,10 @@ Les modèles et décisions doivent être testés avant utilisation en production
 
 👤 Auteur
 
-Projet développé par neura labs
+Projet développé par l'équipe neura labs
+@sheyM31(ingénieur en sécurité IA) et chef de projet
+@ben
+@simonkg2_bipe (ingénieur en pentesting et forensic) 
 Orientation : cybersécurité + intelligence artificielle
 
 
